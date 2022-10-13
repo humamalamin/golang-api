@@ -23,7 +23,7 @@ func NewServer(cfg *config.Config) *Server {
 
 	port := ""
 	if cfg.PortHttpServer == "" {
-		port = "9000"
+		port = ":8000"
 	}
 
 	return &Server{
