@@ -24,6 +24,7 @@ type Config struct {
 	DatabaseMaxOpenConnections int    `mapstructure:"RESOURCE_DATABASE_MAX_OPEN_CONNECTIONS"`
 	DatabaseMaxIdleConnections int    `mapstructure:"RESOURCE_DATABASE_MAX_IDLE_CONNECTIONS"`
 	PortHttpServer             string `mapstructure:"SERVER_HTTP_ADDRESS"`
+	DatabaseURL                string `mapstructure:"DATABASE_URL"`
 }
 
 func NewConfig() (*Config, error) {
@@ -54,6 +55,7 @@ func NewConfig() (*Config, error) {
 		DatabaseMaxOpenConnections: openConn,
 		DatabaseMaxIdleConnections: iddleConn,
 		PortHttpServer:             os.Getenv("SERVER_HTTP_ADDRESS"),
+		DatabaseURL:                os.Getenv("DATABASE_URL"),
 	}
 
 	cfg.AppIsDev = cfg.AppEnv == "staging" || cfg.AppEnv == "local" || cfg.AppEnv == "dev"
