@@ -21,7 +21,7 @@ type Options struct {
 
 func NewGorm(cfg *config.Config) Gorm {
 	opt := new(Options)
-	opt.master = "host=" + cfg.DatabaseHost + " user=" + cfg.DatabaseUsername + " password=" + cfg.DatabasePassword + " dbname=" + cfg.DatabaseName + " port=" + cfg.DatabasePort + " sslmode=" + cfg.DatabaseSsl + " TimeZone=" + cfg.AppTz
+	opt.master = cfg.DatabaseDriver + "://" + " user=" + cfg.DatabaseUsername + " password=" + cfg.DatabasePassword + " dbname=" + cfg.DatabaseName + " port=" + cfg.DatabasePort + " sslmode=" + cfg.DatabaseSsl + " TimeZone=" + cfg.AppTz
 	opt.maxIdle = cfg.DatabaseMaxIdleConnections
 	opt.maxOpen = cfg.DatabaseMaxOpenConnections
 
