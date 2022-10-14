@@ -1,1 +1,1 @@
-web: bin/test-fullstack
+web: bin/test-fullstack.exe
