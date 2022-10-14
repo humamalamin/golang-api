@@ -20,3 +20,10 @@ This apps is API for resolve test case fullstack from universa. I make this API 
 
 - running pgadmin or dbaver or other database management
 - create database and import file dump-test_fullstack-202210140930 inside project
+
+
+### How to deploy cloud
+```
+    cd cmd && go build -o <nama-file-binary>
+    upload binary script to server cloud for execute
+``` 
