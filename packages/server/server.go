@@ -21,9 +21,9 @@ type Server struct {
 func NewServer(cfg *config.Config) *Server {
 	r := mux.NewRouter()
 
-	port := ""
+	port := cfg.PortHttpServer
 	if cfg.PortHttpServer == "" {
-		port = ":8000"
+		port = "8000"
 	}
 
 	return &Server{

@@ -1,1 +1,1 @@
-web: bin/test-fullstack.exe
+web: bin/api-golang
