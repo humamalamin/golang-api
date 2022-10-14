@@ -24,6 +24,9 @@ This apps is API for resolve test case fullstack from universa. I make this API 
 
 ### How to deploy cloud
 ```
-    cd cmd && go build -o <nama-file-binary>
+    cd cmd 
+    go build -o <nama-file-binary>
+    if you windows user:
+        - env GOOS=linux GOARCH=amd64 go build -o <nama-file-binary>
     upload binary script to server cloud for execute
 ``` 
